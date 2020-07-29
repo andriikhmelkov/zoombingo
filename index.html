@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Zoom bingo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <meta name="HandheldFriendly" content="true" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    
+    <body>
+    <script>
+        $(document).ready(function() {
+            $(".container").on("click", function() {
+                $(this).css("background-color", "red");
+            });
+        });
+    </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let arr = [
+                    "Celebrating birthday this month!",
+                    "Has worked here for 3+ years",
+                    "Has a YouTube channel",
+                    "Eats spinach by choice",
+                    "Prefers tea over coffee",
+                    "Has more than 1 pet",
+                    "Woke up before 6 am today",
+                    "Can speak a second language",
+                    "Has visited Europe",
+                    "Has visited China",
+                    "Has visited Brazil",
+                    "Has visited Australia",
+                    "Has visited Africa",
+                    "Attended a meeting while still in pajamas",
+                    "Said at least once: Sorry, I was on mute",
+                    "Joined our team during COVID WFH",
+                    "Finished last meeting on time",
+                    "Eats Hawaiian pizza (pineapple + ham) by choice",
+                    "Born outside of the USA",
+                    "Has more than one middle name",
+                    "Started a new hobby during COVID WFH",
+                    "Mastered a musical instrument",
+                    "Finished reading a book a book this month",
+                    "Not following any sports",
+                    "Usually drinks tea with honey",
+                    "Liked finale of Game of Thrones",
+                    "Ran out of toilet paper first month of COVID WFH",
+                    "AAAA00026",
+                    "AAAA00027",
+                    "AAAA00028",
+                    "AAAA00029",
+                    "AAAA00030",
+                    "AAAA00031",
+                    "AAAA00032",
+                    "AAAA00033",
+                    "AAAA00034",
+                    "AAAA00035",
+                    "AAAA00036",
+                    "AAAA00037",
+                    "AAAA00038",
+                    "AAAA00039",
+                    "AAAA00040",
+                    "AAAA00041",
+                    "AAAA00042",
+                    "AAAA00043",
+                    "AAAA00044",
+                    "AAAA00045",
+                    "AAAA00046",
+                    "AAAA00047",
+                    "AAAA00048"
+                ] // get set of questions
+                arr.sort(() => 0.5 - Math.random()); // randomize
+                let sliced = arr.slice(0, 24); // select 24 questions and assign to a new variable, as slice returns a copy of an array D'oh!
+                sliced.splice(12, 0, "FREE SPACE"); // add free cell into the middle square
+
+                let out = "";
+                for (let i=0; i < sliced.length; i++) {
+                    out += "<div class='container active'>" +
+                        "<div class='text'><span>" + sliced[i] +"</span></div></div>"
+                }
+                document.getElementById("board").innerHTML = out;
+            }, false)
+        </script>
+        <div id="board"></div>
+        <div class="footer"><a href="rules.html" target="_blank">Rules</a></div>
+    </body>
+</html>
