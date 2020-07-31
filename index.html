@@ -64,19 +64,19 @@
                     "Been to more than half of the States",
                     "Been to more than 20 countries",
                     "Takes care of home garden",
-                    "AAAA00042",
-                    "AAAA00043",
-                    "AAAA00044",
-                    "AAAA00045",
-                    "AAAA00046",
-                    "AAAA00047",
-                    "AAAA00048",
-                    "AAAA00049",
-                    "AAAA00050"
+                    "Believes that Darth Vader is the best Star Wars character",
+                    "Have not seen first six Star Wars movies",
+                    "Can mimic other nation's English accent",
+                    "Does not like summer",
+                    "Knows all words to a Queen song",
+                    "Has published a book",
+                    "Had their own 15 minutes of fame",
+                    "Most quiet person on the team",
+                    "Has more than ten boardgames at home"
                 ];
                 arr.sort(() => 0.5 - Math.random()); // randomize
                 let sliced = arr.slice(0, 24); // select 24 questions and assign to a new variable, as slice returns a copy of an array D'oh!
-                sliced.splice(12, 0, "FREE SPACE"); // add free cell into the middle square
+                sliced.splice(12, 0, "FREE SPACE"); // add "free" cell into the middle square
 
                 let out = "";
                 for (let i=0; i < sliced.length; i++) {
